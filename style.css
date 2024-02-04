@@ -12,6 +12,31 @@ html {
     scroll-behavior: smooth;
 }
 
+.navtext {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #3b05ff 0%,
+            #228b84 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 3rem;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -32,9 +57,9 @@ img {
 }
 
 .section-title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 300;
-    color: black;
+    color: rgb(197, 232, 42);
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -42,7 +67,7 @@ img {
 }
 
 .section-title span {
-    color: crimson;
+    color: rgb(36, 42, 159);
 }
 
 .container {
@@ -53,7 +78,7 @@ img {
     justify-content: center;
 }
 
-.hrefs {
+.href {
     display: inline-block;
     padding: 10px 30px;
     color: white;
@@ -67,19 +92,9 @@ img {
     transition-property: background-color, color;
 }
 
-.hrefs:hover {
+.href:hover {
     color: white;
     background-color: crimson;
-}
-
-.brand h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: white;
-}
-
-.brand h1 span {
-    color: crimson;
 }
 
 #header {
@@ -403,13 +418,14 @@ img {
     font-weight: 500;
     letter-spacing: 0.2rem;
     margin-bottom: 10px;
+    color: #4c0594a8;
 }
 
 #about .col-right p {
     margin-bottom: 20px;
 }
 
-#about .col-right .hrefs {
+#about .col-right .href {
     color: black;
     margin-bottom: 50px;
     padding: 10px 20px;
@@ -524,8 +540,82 @@ img {
 }
 
 #footer p {
-    color: white;
-    font-size: 1.3rem;
+    color: #cce7f8;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    animation: shining 0.1s alternate infinite;
+}
+
+.footertext {
+    margin: auto;
+    font-size: 3.5rem;
+    font-weight: 300;
+    animation: lights 5s 750ms linear infinite;
+}
+
+@keyframes shining {
+    from {
+        text-shadow: 0 0 6px rgba(182, 211, 207, 0.9),
+            0 0 30px rgba(182, 211, 207, 0.3), 0 0 12px rgba(15, 115, 223, 0.5),
+            0 0 21px rgba(15, 115, 223, 0.9), 0 0 34px rgba(15, 115, 223, 0.8),
+            0 0 54px rgba(15, 115, 223, 0.9);
+    }
+
+    to {
+        text-shadow: 0 0 6px rgba(182, 211, 207, 1),
+            0 0 30px rgba(182, 211, 207, 0.4), 0 0 12px rgba(15, 115, 223, 0.6),
+            0 0 22px rgba(15, 115, 223, 0.8), 0 0 38px rgba(15, 115, 223, 0.9),
+            0 0 60px rgba(15, 115, 223, 1);
+    }
+}
+
+@keyframes lights {
+    0% {
+        color: hsl(230, 40%, 80%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.2),
+            0 0 0.125em hsla(320, 100%, 60%, 0.3),
+            -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+            1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
+    30% {
+        color: hsl(230, 80%, 90%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 60%, 0.5),
+            -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+            0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    40% {
+        color: hsl(230, 100%, 95%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 90%, 0.5),
+            -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+            0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+
+    70% {
+        color: hsl(230, 80%, 90%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.5),
+            0 0 0.125em hsla(320, 100%, 60%, 0.5),
+            0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+            -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    100% {
+        color: hsl(230, 40%, 80%);
+        text-shadow:
+            0 0 1em hsla(320, 100%, 50%, 0.2),
+            0 0 0.125em hsla(320, 100%, 60%, 0.3),
+            1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+            -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
 }
 
 @keyframes hamburger_puls {
@@ -566,7 +656,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-    .hrefs {
+    .href {
         font-size: 2.5rem;
         padding: 20px 60px;
     }

@@ -176,7 +176,7 @@ img {
     color: crimson;
 }
 
-#header .hamburger {
+/* #header .hamburger {
     height: 60px;
     width: 60px;
     display: inline-block;
@@ -236,7 +236,7 @@ img {
 
 #header .hamburger.active .bar::after {
     top: 0;
-}
+} */
 
 /* End Header section */
 
